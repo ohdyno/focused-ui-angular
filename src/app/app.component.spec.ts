@@ -1,10 +1,20 @@
 import { AppComponent } from './app.component';
 import {render, screen} from "@testing-library/angular";
+import '@testing-library/jest-dom'
 
 describe('AppComponent', () => {
-  it('should render title', async () => {
-    await render(AppComponent);
-    const text = screen.getByText('focused-ui app is running!');
+  it('displays text passed in as a property', async () => {
+    const initialState = {
+      text: 'focused-ui app is running!'
+    };
+
+    await render(AppComponent, {
+      componentProperties: {
+        initialState: initialState
+      }
+    });
+
+    const text = screen.getByText(initialState.text);
     expect(text).toBeInTheDocument();
   });
 });
