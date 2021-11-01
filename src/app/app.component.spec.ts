@@ -1,6 +1,5 @@
 import { AppComponent } from './app.component';
 import {render, screen} from "@testing-library/angular";
-import '@testing-library/jest-dom'
 
 describe('AppComponent', () => {
   it('displays text passed in as a property', async () => {
