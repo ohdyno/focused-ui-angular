@@ -29,6 +29,7 @@
     "@angular/cli": "~12.2.12",
     "@angular/compiler-cli": "~12.2.0",
     "@testing-library/angular": "^10.11.0",
+    "@testing-library/jest-dom": "^5.14.1",
     "@types/jasmine": "~3.8.0",
     "@types/jest": "^27.0.2",
     "@types/node": "^12.11.1",
